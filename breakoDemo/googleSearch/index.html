@@ -3,11 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>My test page</title>
-    <script src="scripts.js"></script>
+    <style>
+        
+        .background {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+            z-index:0;
+        }
+        .squarelayer{
+            position: absolute;
+            z-index:1;
+        }
+    </style>
+    
+
 </head>
 
 <body>
-
+    <script src="scripts.js"></script>
+    <canvas class = "squarelayer" id = "canvas1"></canvas>
+    <img class = "background" src="resources/trial.png" alt="screenshot">
 </body>
 
 
