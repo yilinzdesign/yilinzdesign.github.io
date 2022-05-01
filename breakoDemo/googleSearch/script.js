@@ -1,7 +1,7 @@
 let canvas1 = document.getElementById("canvas1");
 const ctx1 = canvas1.getContext("2d");
-// canvas1.width = window.innerWidth;
-// canvas1.height = window.innerHeight;
+canvas1.width = window.innerWidth;
+canvas1.height = window.innerHeight;
 // ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
 ctx1.beginPath();
 ctx1.lineWidth = "4";
