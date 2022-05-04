@@ -12,7 +12,7 @@ PoseNet using p5.js
 
 // Grab elements, create settings, etc.
 var video = document.getElementById("video");
-var canvas = document.getElementById("canvas");
+var canvas = document.getElementById("canvas2");
 var ctx = canvas.getContext("2d");
 
 // The detected positions will be inside an array
