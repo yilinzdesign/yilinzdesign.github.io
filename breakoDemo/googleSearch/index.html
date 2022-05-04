@@ -25,6 +25,10 @@
             padding:0;
             border:0;
         }
+        .camera{
+            position:absolute;
+            z-index: 3;
+        }
 
     </style>
 <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
@@ -33,9 +37,9 @@
 </head>
 
 <body>
-    
+    <canvas class = "camera" id="canvas2" width="640" height="480"></canvas> 
     <canvas class = "squarelayer" id = "canvas1"></canvas>
-    <canvas id="canvas" width="640" height="480"></canvas> 
+    
     <button id = "button1" class = "button">Click Me!</button>
     <button id = "button2" class = "button">Click Me!</button>
     <button id = "button3" class = "button">Click Me!</button>
