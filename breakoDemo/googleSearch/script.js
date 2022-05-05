@@ -1,5 +1,3 @@
-
-
 var video = document.getElementById("video");
 var canvas = document.getElementById("canvas2");
 var ctx = canvas.getContext("2d");
@@ -8,6 +6,8 @@ let next = 0;
 
 let poses = [];
 let pose;
+let starttime;
+let endtime;
 
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
@@ -51,20 +51,31 @@ function drawKeypoints() {
       if(poses.length>0){
       ctx.beginPath();
       ctx.arc(poses[0].pose.nose.x, poses[0].pose.nose.y, 10, 0, 2 * Math.PI);
-      // ctx.moveTo(poses[0].pose.nose.x, poses[0].pose.nose.y);
-      // ctx.lineTo(poses[0].pose.nose.x, poses[0].pose.nose.y);
       ctx.stroke();
       
-      //going right
-      setInterval(function recheckposition(){
-        show(0);
-        if (poses[0].pose.nose.x <300){
-          // console.log("turning right")
-          changeToRight();
-          console.log(next);
-          // setTimeout(changeToRight(), 10000);
-        }
-      }, 8000)
+      if (poses[0].pose.nose.x <300){
+        
+setTimeout(() => {
+  // drawsquare();
+  show(next),5000;
+  
+   },5000)
+
+      console.log(next);
+
+      
+
+      }
+      
+      // //going right
+      // setInterval(function recheckposition(){
+
+      //   if (poses[0].pose.nose.x <300){
+      //     drawsquare();
+      //     console.log(next);
+      //     // setTimeout(changeToRight(), 10000);
+      //   }
+      // }, 8000)
       
       //going left
     } 
@@ -72,6 +83,7 @@ function drawKeypoints() {
 
 }
 // }
+
 
 // A function to draw the skeletons
 function drawSkeleton() {
@@ -110,25 +122,29 @@ canvas1.height = window.innerHeight;
 // let Imfeelinglucky = ctx1.rect(720,330,120,50);
 
 // let selection = [about, store, gmail, images, menu, login, typein, googlesearch, Imfeelinglucky];
-function changeToRight()
+function drawsquare()
 {
-  ctx1.clearRect(0,0,canvas1.width,canvas1.height);
+  
   if(next<9){
     next= next + 1
   } else if(next >8){
     next = 8;
   }
-  show(next);
-  // console.log(next)
+  
+
 }
+
 function show(i){
+
 ctx1.beginPath();
 ctx1.lineWidth = "2";
 ctx1.strokeStyle = color;
+
   if(i===0){
     ctx1.clearRect(0,0,canvas1.width, canvas1.height);
     ctx1.rect(20, 20, 50, 50);//draw about
     ctx1.stroke();
+
   }else if(i===1){
     ctx1.clearRect(0,0,canvas1.width, canvas1.height);
     ctx1.rect(80,20,50,50);//draw store
@@ -163,7 +179,13 @@ ctx1.strokeStyle = color;
     ctx1.stroke();
   }
   
-
+if(i<9){
+  i= i + 1;
+  next=i;
+} else if(i >8){
+  i = 8;
+  next=i;
+}
 }
 
 
