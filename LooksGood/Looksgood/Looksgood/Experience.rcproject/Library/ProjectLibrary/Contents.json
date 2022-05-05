@@ -1,0 +1,32 @@
+[
+  {
+    "libraryIdentifier" : "9a328de12338b7a55ed4e159ec820588",
+    "format" : "model",
+    "displayName" : "clothesSpring.usdz"
+  },
+  {
+    "libraryIdentifier" : "8799a12d522370fb4d82f1c02d164acd",
+    "format" : "model",
+    "displayName" : "Glasses.usdz"
+  },
+  {
+    "libraryIdentifier" : "9dbc28be0b2b5db044fa77cca34c065e",
+    "format" : "model",
+    "displayName" : "filterspring.usdz"
+  },
+  {
+    "libraryIdentifier" : "65faddfed0b60e9760fa0637af517f42",
+    "format" : "model",
+    "displayName" : "filterspring.usdz"
+  },
+  {
+    "libraryIdentifier" : "7e7b64786519fd33975e40e051cf3535",
+    "format" : "model",
+    "displayName" : "filterspring.usdz"
+  },
+  {
+    "libraryIdentifier" : "7ac0ce8021e322a9f59445d9e01846bb",
+    "format" : "model",
+    "displayName" : "filteroutsider.usdz"
+  }
+]
